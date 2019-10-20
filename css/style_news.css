@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(90, 85, 85);
+    font-family: 'Montserrat', sans-serif;
+    height: 1000px;
+}
+
+/* .container {
+    margin: 0 auto;
+    font-size: 150%;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+} */
+
+ .logo {
+    /* display: block;
+    float: left; */
+    height: 50px;
+}
+
+/*
+.menu  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100px;
+}
+
+.menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+.menu a:hover {
+    color: yellow;
+    font-size: 110%;
+    transition-duration: 0.5s;
+}
+
+.active a {
+    color: yellow;
+}
+*/
+
+.menu li {
+    position: relative;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    list-style: none;
+    z-index: 1;
+    left: 0;
+    background-color: rgb(90, 85, 85);
+    border-radius: 3%;
+    min-width: 100%;
+}
+.menu li:hover .dropdown{
+    display: flex;
+    flex-direction: column;
+}
+.dropdown li{
+    margin: 5px;
+}
+
+.dropdown a {
+    color: rgb(255, 255, 255);
+    font-size: 90%;
+}
+
+.dropdown a:hover {
+    font-size: 90%;
+}
+/*
+
+.about__header {
+    display: flex;
+    justify-content: center;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    margin-top: 50px;
+
+}
+
+@keyframes label {
+    0%   {top:-400px;}
+    100% {top:0px;}
+  } */
+
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    animation-name: label;
+    animation-duration: 3s;
+}
+
+.label img {
+    height: 300;
+}
+
+/*
+div.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    margin-top: 75px;
+    background: black;
+    height: 50px;
+
+} */

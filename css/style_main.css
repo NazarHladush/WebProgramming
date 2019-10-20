@@ -94,30 +94,30 @@ div.about {
     padding-right: 12.5%;
 }
 
-/* @keyframes photo {
+@keyframes photo {
     0%   {left:-489.63px;}
-    100% {left:0px;} */
+    100% {left:0px;}
   }
 
 .about__photo {
     position: relative;
-    /* animation-name: photo; */
-    /* animation-duration: 3s; */
+    animation-name: photo;
+    animation-duration: 3s;
 }
 
 div.about__photo img {
     height: 400px;
 }
-/* 
+
 @keyframes about_text {
     0%   {right:-1115.26px;}
     100% {right:0px;}
-  } */
+  }
 
 .about__text {
     position: relative;
-    /* animation-name: about_text; */
-    /* animation-duration: 3s; */
+    animation-name: about_text;
+    animation-duration: 3s;
 }
 
 div.about__text p{
@@ -125,10 +125,10 @@ div.about__text p{
     color: white;
 }
 
-/* @keyframes label {
+@keyframes label {
     0%   {top:-400px;}
     100% {top:0px;}
-  } */
+  }
 
 .label {
     display: flex;
@@ -137,8 +137,8 @@ div.about__text p{
     position: relative;
     padding-left: 12.5%;
     padding-right: 12.5%;
-    /* animation-name: label; */
-    /* animation-duration: 3s; */
+    animation-name: label;
+    animation-duration: 3s;
 }
 
 .label img {
