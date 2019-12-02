@@ -1,0 +1,15 @@
+CACHE MANIFEST
+#v1.0.0
+CACHE:
+index.html
+fans_appeal.html
+admin.html
+css/
+css/img/images2.jpg
+news.html
+
+NETWORK:
+*
+
+FALLBACK:
+/ error.html
