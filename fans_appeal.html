@@ -105,7 +105,7 @@
     <form>
       <div class="row mt-3 p-3">
         <div class="col-12 col-md-4">
-          <button type="button" onclick="newAppeal(event)" class="form-control btn btn-success mb-3"
+          <button type="button" onclick="createAppeal()" class="form-control btn btn-success mb-3"
             value="Send">Send</button>
         </div>
         <div class="col-12 col-md-8">
@@ -120,41 +120,9 @@
       <p>© Copyright 2019</p>
     </div>
   </footer>
-  <script>
-    function newAppeal(event) {
-      event.preventDefault();
-      if (document.getElementById("newAppealText").value.trim()) {
-        var text = document.getElementById("newAppealText").value;
 
-        var appeal = document.createElement("div")
-        appeal.className = "row mt-3 p-3 appeal";
-        var userData = document.createElement("div");
-        userData.className = "col-4 col-md-2 text-center";
-        var textBody = document.createElement("div");
-        textBody.className = "col-8 col-md-10";
+  <script type="text/javascript" src="js/javascript.js"></script>
 
-        var today = new Date();
-        var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
-        var p1 = document.createElement("p");
-        var t = "Name Surname" + " <br /> " + date + " <br /> " + time;
-        p1.innerHTML = t;
-        textBody.innerHTML = text;
-
-        userData.appendChild(p1)
-        appeal.appendChild(userData);
-        appeal.appendChild(textBody);
-
-        var parent = document.getElementById("appeal_content");
-        parent.appendChild(appeal)
-        document.getElementById("newAppealText").value = ""
-      }
-      else {
-        alert("Input a valid value")
-      }
-    }
-  </script>
 </body>
 
 </html>

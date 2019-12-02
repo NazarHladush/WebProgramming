@@ -97,28 +97,9 @@
             <p>© Copyright 2019</p>
         </div>
     </footer>
-    <script>
-        $(".custom-file-input").on("change", function () {
-            var fileName = $(this).val().split("\\").pop();
-            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-        });
 
-        function add_news() {
-            var image = (!document.getElementById("customFile").value.trim()) ? alert("Please add image") : image = true;
-            var title = (!document.getElementById("newsTitle").value.trim()) ? alert("News Title is empty") : title = true;
-            var news = (!document.getElementById("newsBody").value.trim()) ? alert("News Body is empty") : news = true;
+    <script type="text/javascript" src="js/admin.js"></script>
 
-            var fieldClear = (image && title && news) ? clear() : console.log("error");
-        }
-
-        function clear() {
-            alert("Successfully added");
-            document.getElementById("customFile").value = "";
-            document.getElementById("newsTitle").value = "";
-            document.getElementById("newsBody").value = "";
-            document.getElementById("placeholder").innerHTML = "Choose file";
-        }
-    </script>
 </body>
 
 </html>
