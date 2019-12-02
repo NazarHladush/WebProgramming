@@ -9,27 +9,15 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    margin: 0 auto;
-    font-size: 150%;
-    padding-left: 12.5%;
-    padding-right: 12.5%;
-}
-
-.logo {
+ .logo {
     display: block;
     float: left;
-    height: 100px;
+    height: 50px;
 }
 
+
 .menu  {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    height: 100px;
+    font-size: 150%;
 }
 
 .menu a {
@@ -37,14 +25,11 @@ body {
     text-decoration: none;
 }
 
+
 .menu a:hover {
-    color: yellow;
+    color: yellow !important;
     font-size: 110%;
     transition-duration: 0.5s;
-}
-
-.active a {
-    color: yellow;
 }
 
 .menu li {
@@ -61,10 +46,12 @@ body {
     border-radius: 3%;
     min-width: 100%;
 }
+
 .menu li:hover .dropdown{
-    display: flex;	/* Display the dropdown */
+    display: flex;
     flex-direction: column;
 }
+
 .dropdown li{
     margin: 5px;
 }
@@ -131,18 +118,13 @@ div.about__text p{
   }
 
 .label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    padding-left: 12.5%;
-    padding-right: 12.5%;
     animation-name: label;
     animation-duration: 3s;
 }
 
 .label img {
-    height: 300;
+    /* height: 300; */
 }
 
 .album__header {
@@ -157,8 +139,8 @@ div.about__text p{
 .album {
     display: flex;
     justify-content: space-between;
-    padding-left: 12.5%;
-    padding-right: 12.5%;
+    /* padding-left: 12.5%;
+    padding-right: 12.5%; */
     margin-top: 25px;
 }
 
