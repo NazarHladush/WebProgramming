@@ -19,10 +19,7 @@ customFile.addEventListener("change", function () {
 });
 
 function add_news() {
-    if (isOnline()) {
-        alert("You are online");
-    } else {
-        let title = document.getElementById("newsTitle").value;
+    let title = document.getElementById("newsTitle").value;
         let news = document.getElementById("newsBody").value;
         let bool = true;
         let img_2 = document.getElementById("customFile");
@@ -45,7 +42,14 @@ function add_news() {
                 title: title,
                 text: news,
             };
-
+    if (isOnline()) {
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:3500/addNews",
+            contentType: 'application/json',
+            data: JSON.stringify(News),
+        });
+    } else {
             provider.add("news", News);
             document.getElementById("newsTitle").value = "";
             document.getElementById("newsBody").value = "";

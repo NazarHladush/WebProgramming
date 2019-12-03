@@ -16,9 +16,18 @@ function createAppeal() {
         user: "Name Surname"
     };
 
-    provider.add('appeals', Appeal)
+    if (isOnline()) {
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:3500/addAppeals",
+            contentType: 'application/json',
+            data: JSON.stringify(Appeal),
+        });
+    } else if (!isOnline()) {
+        provider.add('appeals', Appeal)
 
-    document.getElementById("newAppealText").value = "";
+        document.getElementById("newAppealText").value = "";
+    }
 }
 
 function addAppealOnPage() {
