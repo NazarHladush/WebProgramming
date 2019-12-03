@@ -33,6 +33,7 @@ function createAppeal() {
 function addAppealOnPage() {
     provider.get('appeals', (data) => {
         existingAppeals = data;
+        console.log(data);
         let appeal;
         for (appeal in data) {
             appeal = data[appeal];
@@ -70,6 +71,35 @@ function handleConnectionChange(event) {
         provider.remove('appeals');
     }
 }
+
+window.onload = function() {
+    $.get("http://localhost:3500/getAppeals", function(data, status){
+        let appeal;
+        for (appeal in data.body) {
+            appeal = data.body[appeal];
+
+            var appeal1 = document.createElement("div")
+            appeal1.className = "row mt-3 p-3 appeal";
+            var userData = document.createElement("div");
+            userData.className = "col-4 col-md-2 text-center";
+            var textBody = document.createElement("div");
+            textBody.className = "col-8 col-md-10";
+
+            var p1 = document.createElement("p");
+            var t = appeal.user + " <br /> " + appeal.date + " <br /> " + appeal.time;
+            p1.innerHTML = t;
+            textBody.innerHTML = appeal.appeal;
+
+            userData.appendChild(p1)
+            appeal1.appendChild(userData);
+            appeal1.appendChild(textBody);
+
+            var parent = document.getElementById("appeal_content");
+            parent.appendChild(appeal1)
+            document.getElementById("newAppealText").value = ""
+        }
+      });
+  };
 
 window.addEventListener('online', handleConnectionChange);
 window.addEventListener('offline', handleConnectionChange);

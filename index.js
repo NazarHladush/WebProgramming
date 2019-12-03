@@ -40,4 +40,31 @@ app.post("/addNews", function(req, res){
   });
 });
 
+app.get('/getAppeals', (req, res) => {
+    MongoClient.connect(url, function(err, db) {
+      if (err) throw err;
+      var dbo = db.db("db");
+      dbo.collection("appeals").find().toArray((err, items) => {
+        res.json({
+	      body: items,
+	    });
+      });
+      db.close();
+    });
+    
+})
+
+app.get('/getNews', (req, res) => {
+    MongoClient.connect(url, function(err, db) {
+      if (err) throw err;
+      var dbo = db.db("db");
+      dbo.collection("news").find().toArray((err, items) => {
+        res.json({
+          data: items
+        });
+      });
+      db.close();
+    });
+})
+
 app.listen(3500)

@@ -1,4 +1,4 @@
-const useLocalStorage = true;
+const useLocalStorage = false;
 
 class LocalStorageProvider {
     constructor() {
